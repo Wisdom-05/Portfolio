@@ -11,6 +11,16 @@
     content="John Wisdom Deguit - Aspiring Web Developer & IT Student. Personal portfolio showcasing projects and skills." />
   <title>John Wisdom Deguit | IT Student &amp; Aspiring Web Developer</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Open Graph meta tags (for social media previews) -->
+  <meta property="og:title" content="John Wisdom Deguit | IT Student &amp; Aspiring Web Developer" />
+  <meta property="og:description" content="Personal portfolio of John Wisdom Deguit — IT student passionate about web development and building meaningful digital experiences." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/wiz.png" />
+  <meta property="og:url" content="https://wisdom-05.github.io/Portfolio" />
+
   <!-- Google Fonts: We use 'Inter' for body text and 'Fira Code' for code-style accents -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -203,8 +213,8 @@
             in software testing and QA, understanding that quality code matters as much as working code.
           </p>
 
-          <!-- Download resume button -->
-          <a href="#" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-flex;">
+          <!-- Download resume button - link to your PDF resume when ready -->
+          <a href="#" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-flex;" title="Resume coming soon!" onclick="alert('Resume PDF coming soon! Check back later.'); return false;">
             <i class="fas fa-download"></i> Download Resume
           </a>
         </div>
@@ -353,19 +363,40 @@
 
             <!-- Action buttons -->
             <div class="project-links">
-              <!-- Replace '#' with your actual GitHub repository URL -->
               <a href="https://github.com/Wisdom-05" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
                 <i class="fab fa-github"></i> GitHub
-              </a>
-              <!-- Replace '#' with your live demo URL if available -->
-              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
-                <i class="fas fa-external-link-alt"></i> Demo
               </a>
             </div>
           </div>
         </article>
 
-        <!-- ── ADD MORE PROJECT CARDS BELOW THIS LINE ── -->
+        <!-- CertGen Project -->
+        <article class="project-card">
+          <div class="project-top-bar"></div>
+          <div class="project-body">
+            <div class="project-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="project-title">CertGen — Certificate Generator</h3>
+            <p class="project-description">
+              A web-based certificate generation system that allows administrators
+              to create, manage, and export student certificates. Features include
+              dynamic PDF generation, student data management, and a clean dashboard UI.
+            </p>
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Wisdom-05" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
 
         <!-- Placeholder card to encourage adding more projects -->
         <article class="project-card project-card--coming-soon">
@@ -379,7 +410,7 @@
               I'm currently working on new projects. Check back later or
               visit my GitHub to see what I'm building next!
             </p>
-            <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
+            <a href="https://github.com/Wisdom-05" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
               <i class="fab fa-github"></i> Visit GitHub
             </a>
           </div>
@@ -412,33 +443,33 @@
           <!-- TIP: Replace the placeholder values with your real info -->
           <div class="contact-items">
 
-            <a href="mailto:johnwisdomdeguit@email.com" class="contact-item">
+            <a href="mailto:johnwisdomdeguit@gmail.com" class="contact-item">
               <div class="contact-item-icon">
                 <i class="fas fa-envelope"></i>
               </div>
               <div>
                 <span class="contact-item-label">Email</span>
-                <span class="contact-item-value">johnwisdomdeguit@email.com</span>
+                <span class="contact-item-value">johnwisdomdeguit@gmail.com</span>
               </div>
             </a>
 
-            <a href="https://github.com" target="_blank" rel="noopener" class="contact-item">
+            <a href="https://github.com/Wisdom-05" target="_blank" rel="noopener" class="contact-item">
               <div class="contact-item-icon">
                 <i class="fab fa-github"></i>
               </div>
               <div>
                 <span class="contact-item-label">GitHub</span>
-                <span class="contact-item-value">https://github.com/Wisdom-05</span>
+                <span class="contact-item-value">github.com/Wisdom-05</span>
               </div>
             </a>
 
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-item">
+            <a href="https://www.linkedin.com/in/wisdom-deguit-b035993b6/" target="_blank" rel="noopener" class="contact-item">
               <div class="contact-item-icon">
                 <i class="fab fa-linkedin-in"></i>
               </div>
               <div>
                 <span class="contact-item-label">LinkedIn</span>
-                <span class="contact-item-value">https://www.linkedin.com/in/wisdom-deguit-b035993b6/</span>
+                <span class="contact-item-value">linkedin.com/in/wisdom-deguit</span>
               </div>
             </a>
 
@@ -503,7 +534,7 @@
           rel="noopener" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="mailto:johnwisdomdeguit@email.com" class="social-link" aria-label="Email">
+        <a href="mailto:johnwisdomdeguit@gmail.com" class="social-link" aria-label="Email">
           <i class="fas fa-envelope"></i>
         </a>
       </div>
