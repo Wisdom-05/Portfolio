@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META TAGS - Important for SEO and mobile responsiveness
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="John Wisdom Deguit - Aspiring Web Developer & IT Student. Personal portfolio showcasing projects and skills." />
+  <title>John Wisdom Deguit | IT Student &amp; Aspiring Web Developer</title>
+
+  <!-- Google Fonts: We use 'Inter' for body text and 'Fira Code' for code-style accents -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome: Provides all the icons used in the site (social media, arrow, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Our custom stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- EmailJS SDK: allows sending real emails from JavaScript (no backend needed) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       - Fixed at the top of the screen
+       - Contains the logo and nav links
+       - Hamburger menu appears on mobile
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo: your initials styled as a brand -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>JWD<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop navigation links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger button (only visible on mobile screens) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       SECTION 1: HERO / HOME
+       - First thing visitors see
+       - Contains your name, tagline, intro, and CTA button
+       ============================================================ -->
+  <section class="hero" id="home">
+    <!-- Animated background grid pattern (purely decorative CSS) -->
+    <div class="hero-bg-grid"></div>
+
+    <!-- Floating decorative circles in the background -->
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+
+    <div class="hero-container">
+      <!-- Left side: text content -->
+      <div class="hero-content">
+        <!-- Small label above the name -->
+        <div class="hero-greeting">
+          <span class="greeting-dot"></span>
+          Hello, World! I'm
+        </div>
+
+        <!-- Main heading: your name -->
+        <h1 class="hero-name">
+          John Wisdom<br />
+          <span class="name-accent">Deguit</span>
+        </h1>
+
+        <!-- Tagline with a typing animation effect -->
+        <p class="hero-tagline">
+          <span class="fira">// </span>
+          <span id="typed-text"></span>
+          <span class="cursor">|</span>
+        </p>
+
+        <!-- Short introduction paragraph -->
+        <p class="hero-intro">
+          I'm an IT student passionate about web development and building
+          meaningful digital experiences. Currently learning the fundamentals
+          and working toward becoming a full-stack software developer.
+        </p>
+
+        <!-- Call-to-action buttons -->
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-code"></i> View My Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Right side: profile image -->
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <!-- Profile photo -->
+          <div class="profile-placeholder" id="profile-img">
+            <img src="images/wiz.jpg" alt="John Wisdom Deguit" />
+          </div>
+          <!-- Green ring decoration around the image -->
+          <div class="image-ring"></div>
+          <!-- Small floating badge -->
+          <div class="image-badge">
+            <i class="fas fa-laptop-code"></i>&nbsp; Open to opportunities
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated scroll indicator at the bottom -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-text">Scroll</span>
+      <i class="fas fa-chevron-down scroll-arrow"></i>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2: ABOUT ME
+       ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <!-- Section title (reusable pattern used throughout the site) -->
+      <div class="section-header">
+        <span class="section-label">Get to know me</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Info cards -->
+        <div class="about-stats">
+          <!-- Each stat card shows a quick fact -->
+          <div class="stat-card">
+            <i class="fas fa-graduation-cap stat-icon"></i>
+            <div>
+              <h3 class="stat-number">IT</h3>
+              <p class="stat-label">Student</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-code stat-icon"></i>
+            <div>
+              <h3 class="stat-number">6+</h3>
+              <p class="stat-label">Skills Learning</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-project-diagram stat-icon"></i>
+            <div>
+              <h3 class="stat-number">1+</h3>
+              <p class="stat-label">Projects Built</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-bug stat-icon"></i>
+            <div>
+              <h3 class="stat-number">QA</h3>
+              <p class="stat-label">Testing Enthusiast</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text content -->
+        <div class="about-content">
+          <h3 class="about-subtitle">Aspiring Developer &amp; Problem Solver</h3>
+          <p class="about-text">
+            I'm <strong>John Wisdom Deguit</strong>, an IT student with a strong passion for
+            programming and web development. I enjoy the process of building systems from scratch
+            and solving real-world problems through technology.
+          </p>
+          <p class="about-text">
+            My interests lie in creating clean, functional, and user-friendly web applications.
+            I'm currently learning the full stack — from front-end design to back-end logic and
+            database management — and I find each layer of the web fascinating.
+          </p>
+          <p class="about-text">
+            My long-term goal is to become a proficient <strong>software developer</strong>,
+            working on impactful projects that make a difference. I also have a growing interest
+            in software testing and QA, understanding that quality code matters as much as working code.
+          </p>
+
+          <!-- Download resume button -->
+          <a href="#" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-flex;">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3: SKILLS
+       ============================================================ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What I work with</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Skills grid: each card = one skill -->
+      <div class="skills-grid">
+
+        <!-- SKILL CARD TEMPLATE:
+             To add a new skill, copy one <div class="skill-card"> block
+             and change the icon, name, level text, and progress bar width. -->
+
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--icon-color: #e34c26;">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h3 class="skill-name">HTML5</h3>
+          <p class="skill-level-text">Intermediate</p>
+          <!-- Progress bar: change the 'width' in style to reflect your level -->
+          <div class="skill-bar">
+            <div class="skill-progress" style="--progress: 70%;"></div>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--icon-color: #264de4;">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <h3 class="skill-name">CSS3</h3>
+          <p class="skill-level-text">Intermediate</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--progress: 65%;"></div>
+          </div>
+          <span class="skill-percent">65%</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--icon-color: #f7df1e;">
+            <i class="fab fa-js-square"></i>
+          </div>
+          <h3 class="skill-name">JavaScript</h3>
+          <p class="skill-level-text">Beginner</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--progress: 45%;"></div>
+          </div>
+          <span class="skill-percent">45%</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--icon-color: #8993be;">
+            <i class="fab fa-php"></i>
+          </div>
+          <h3 class="skill-name">PHP</h3>
+          <p class="skill-level-text">Beginner</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--progress: 50%;"></div>
+          </div>
+          <span class="skill-percent">50%</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--icon-color: #00758f;">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="skill-name">MySQL</h3>
+          <p class="skill-level-text">Beginner</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--progress: 50%;"></div>
+          </div>
+          <span class="skill-percent">50%</span>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--icon-color: #22c55e;">
+            <i class="fas fa-bug"></i>
+          </div>
+          <h3 class="skill-name">Software Testing / QA</h3>
+          <p class="skill-level-text">Beginner</p>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--progress: 40%;"></div>
+          </div>
+          <span class="skill-percent">40%</span>
+        </div>
+
+      </div><!-- end .skills-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4: PROJECTS
+       ============================================================ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What I've built</span>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Projects grid: each card = one project -->
+      <div class="projects-grid">
+
+        <!-- PROJECT CARD TEMPLATE:
+             To add a new project, copy one <article class="project-card"> block
+             and update the title, description, tags, and links. -->
+
+        <article class="project-card">
+          <!-- Top accent bar color -->
+          <div class="project-top-bar"></div>
+
+          <div class="project-body">
+            <!-- Project icon -->
+            <div class="project-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+
+            <!-- Project details -->
+            <h3 class="project-title">Task Manager System</h3>
+            <p class="project-description">
+              A web-based system that helps users manage tasks efficiently.
+              Includes features for creating, updating, and deleting tasks,
+              along with integrated test logs and defect logs to support QA practices.
+            </p>
+
+            <!-- Technology tags -->
+            <div class="project-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="project-links">
+              <!-- Replace '#' with your actual GitHub repository URL -->
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <!-- Replace '#' with your live demo URL if available -->
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── ADD MORE PROJECT CARDS BELOW THIS LINE ── -->
+
+        <!-- Placeholder card to encourage adding more projects -->
+        <article class="project-card project-card--coming-soon">
+          <div class="project-top-bar"></div>
+          <div class="project-body coming-soon-body">
+            <div class="project-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <h3 class="project-title">More Coming Soon</h3>
+            <p class="project-description">
+              I'm currently working on new projects. Check back later or
+              visit my GitHub to see what I'm building next!
+            </p>
+            <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Visit GitHub
+            </a>
+          </div>
+        </article>
+
+      </div><!-- end .projects-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5: CONTACT
+       ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Let's work together</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Contact info cards -->
+        <div class="contact-info">
+          <p class="contact-intro">
+            I'm always open to connecting with fellow students, developers, and potential mentors.
+            Whether you have a question, a project idea, or just want to say hi — feel free to reach out!
+          </p>
+
+          <!-- Contact detail items -->
+          <!-- TIP: Replace the placeholder values with your real info -->
+          <div class="contact-items">
+
+            <a href="mailto:johnwisdomdeguit@email.com" class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">johnwisdomdeguit@email.com</span>
+              </div>
+            </a>
+
+            <a href="https://github.com" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div>
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-value">https://github.com/Wisdom-05</span>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div>
+                <span class="contact-item-label">LinkedIn</span>
+                <span class="contact-item-value">https://www.linkedin.com/in/wisdom-deguit-b035993b6/</span>
+              </div>
+            </a>
+
+          </div><!-- end .contact-items -->
+        </div>
+
+        <!-- Right: Contact form -->
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Let's collaborate!" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+
+          <!-- Success/error message shown after form submission (controlled by JS) -->
+          <div class="form-status" id="form-status"></div>
+        </form>
+
+      </div><!-- end .contact-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer logo -->
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>JWD<span class="logo-bracket">/&gt;</span>
+      </div>
+
+      <!-- Short tagline -->
+      <p class="footer-tagline">Aspiring Web Developer &amp; IT Student</p>
+
+      <!-- Social media icon links -->
+      <div class="footer-socials">
+        <!-- Replace href="#" with your actual profile URLs -->
+        <a href="https://github.com/Wisdom-05" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/wisdom-deguit-b035993b6/" class="social-link" target="_blank"
+          rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:johnwisdomdeguit@email.com" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Divider line -->
+      <div class="footer-divider"></div>
+
+      <!-- Copyright notice: JS automatically updates the year -->
+      <p class="footer-copy">
+        &copy; <span id="year"></span> John Wisdom Deguit. All rights reserved.
+      </p>
+      <p class="footer-made">Made with <span class="heart">&#9829;</span> using HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button (appears when user scrolls down) -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Load our JavaScript file (at the bottom so HTML loads first) -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
